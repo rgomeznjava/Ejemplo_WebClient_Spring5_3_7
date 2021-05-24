@@ -40,7 +40,7 @@ public class Test_ClienteHttp4513 {
 	@Before
 	public  void _testInicializar() throws Exception {
 		
-		//RUTA_PRUEBAS = "E:/PRUEBAS/";
+		//RUTA_PRUEBAS = "C:/PRUEBAS/";
 		
 		USUARIO = "XXXXXX";    
 		PASSWORD = "XXXXXX";
@@ -48,38 +48,32 @@ public class Test_ClienteHttp4513 {
 		URL_PETICION = "https://dummy.restapiexample.com/api/v1/employees";
 		//URL_PETICION = "https://www.google.es";
 
-		
 	}	
 	 
 	
 	//@Ignore ("descomentar para ignorar")	
 	@Test
-	public void prueba_GET_TLSv1_2() throws Exception {
+	public void prueba_GET_TLS() throws Exception {
 					
-		System.out.println(NEW_LINE+"TEST ---> PRUEBA GET (HTTPS-TLSv1.2) ...");
+		System.out.println(NEW_LINE+"TEST ---> PRUEBA GET (HTTPS-TLS) ...");
 		
-		//Datos de prueba: parametros
-		String p1 = "aaaa"; 
-		String p2 =  "bbbbb";	
-		String p3 = "cccc";   
+		 
 		//url peticion
-		//String urlPeticion = URL_PETICION + "solicitarDatosFormulario/"+p1+ "/"+p2 +"/"+p3;	
 		String urlPeticion = URL_PETICION;			
 		
-		//CALL WS
+		//CALL HTTP
 		clienteHttp = new ClienteHttp4513();	
 
-		//clienteHttp = new ClienteHttp4513Ejemplo(ClienteHttp4513Ejemplo.TLSv1_2, USUARIO, PASSWORD);	
 		//Objeto de negocio respuesta cliente 
 		RespuestaClienteHttp respuestaCliente = clienteHttp.realizarPeticion_GET(urlPeticion);
 		
 		//200 Ok, 201 Created, 202 Accepted, 400 Bad request, 406 Not acceptable, 500 Error Server
-		
-		//Todos los igual o mayores de 3xx..4xx..5xx ser�an error: 406 Not acceptable, 500 Error Server
-		//excepto 400 Bad Request --> LO UTILIZAMOS COMO ERRORES DE VALIDACION O LOGICA (Error controlado)
+		//Todos los igual o mayores de 3xx..4xx..5xx seran errores: 
+		//Excpeto los que utilicemos para errores de logica negocio  500 Error Server
+		//400 Bad Request, 406 Not acceptable a medida o reutilizados
 	 
 		//El TEST es OK, si trae cod.estado correspodiente a la prueba y  recibe XML con confirmacion true/false
-		Assert.assertTrue("TEST GET_TLSv1_2  NO HA PASADO: SE ESPERABA 200 OK", 
+		Assert.assertTrue("TEST PRUEBA GET TLS  NO HA PASADO: SE ESPERABA 200 OK", 
 				respuestaCliente.getCodigoEstado()==200 
 				&& respuestaCliente.getResultado().contains("Tiger Nixon"));
 	}
@@ -89,71 +83,13 @@ public class Test_ClienteHttp4513 {
 	
 	
 	
-	@Ignore ("descomentar para ignorar")	
-	@Test
-	public void solicitarDatosFormulario_GET_TLSv1_3() throws Exception {
-					
-		System.out.println(NEW_LINE+"TEST ---> SOLICITAR DATOS FORMULARIO GET (HTTPS-TLSv1.3) ...");
-		
-		//Datos de prueba: parametros
-		String perito = "00032"; 
-		String tramitacion =  "2021009999901";	
-		String tipoFormulario = "DT11";   
-		//url peticion
-		String urlPeticion = URL_PETICION + "solicitarDatosFormulario/"+perito+ "/"+tramitacion +"/"+tipoFormulario;	
-					
-		//CALL WS
-		clienteHttp = new ClienteHttp4513();
-		//Objeto de negocio respuesta cliente 
-		RespuestaClienteHttp respuestaCliente = clienteHttp.realizarPeticion_GET(urlPeticion);
-		
-		//200 Ok, 201 Created, 202 Accepted, 400 Bad request, 406 Not acceptable, 500 Error Server
-		
-		//Todos los igual o mayores de 3xx..4xx..5xx ser�an error: 406 Not acceptable, 500 Error Server
-		//excepto 400 Bad Request --> LO UTILIZAMOS COMO ERRORES DE VALIDACION O LOGICA (Error controlado)
-	 
-		//El TEST es OK, si trae cod.estado correspodiente a la prueba y  recibe XML con confirmacion true/false
-		Assert.assertTrue("TEST SOLICITAR DATOS FORMULARIO NO HA PASADO: SE ESPERABA 400 BAD REQUEST", 
-						(respuestaCliente.getCodigoEstado()==400)
-						&& respuestaCliente.getResultado().contains("<confirmacion>") );
-	}
-	
-
-
-	@Ignore ("descomentar para ignorar")	
-	@Test
-	public void solicitarDatosFormulario_GET_TLSv1_2() throws Exception {
-		
-		System.out.println(NEW_LINE+"TEST ---> SOLICITAR DATOS FORMULARIO GET (HTTPS-TLSv1.2) ...");
-		
-		//Datos de prueba: parametros
-		String perito = "00032"; 
-		String tramitacion =  "2021009999901";	
-		String tipoFormulario = "DT11";   
-		//url peticion
-		String urlPeticion = URL_PETICION + "solicitarDatosFormulario/"+perito+ "/"+tramitacion +"/"+tipoFormulario;	
-			
-		//CALL WS
-		//Establecemos TLSv1.2 en constructor
-		clienteHttp = new ClienteHttp4513();	
-		//Objeto de negocio respuesta cliente 
-		RespuestaClienteHttp respuestaCliente = clienteHttp.realizarPeticion_GET(urlPeticion);
-		
-		//El TEST es OK, si trae cod.estado correspodiente a la prueba y  recibe XML con confirmacion true/false
-		Assert.assertTrue("TEST SOLICITAR DATOS FORMULARIO NO HA PASADO: SE ESPERABA 400 BAD REQUEST", 
-						(respuestaCliente.getCodigoEstado()==400)
-						&& respuestaCliente.getResultado().contains("<confirmacion>") );
-	} 
-	
-	
-	
 	@Ignore ("descomentar para ignorar")	 
 	@Test
-	public void registrarFormulario_POST() throws Exception {
+	public void prueba_POST_XML() throws Exception {
 		
-		System.out.println(NEW_LINE+"TEST ---> REGISTRAR FORMULARIO POST....");
+		System.out.println(NEW_LINE+"TEST ---> PRUEBA POST XML....");
 		
-		String urlPeticion = URL_PETICION + "registrarFormulario/"; 	 
+		String urlPeticion = URL_PETICION; 	 
 		
 		//Datos XML a enviar, obtenidos de file
 		String nombreArchivoXML = "datos.xml";
@@ -165,43 +101,38 @@ public class Test_ClienteHttp4513 {
 		//Objeto respuesta de negocio
 		RespuestaClienteHttp respuestaCliente  = clienteHttp.realizarPeticion_POST(urlPeticion, datosXML);
 			
-		//El TEST es OK, si trae cod.estado correspondiente a la prueba y  recibe XML con confirmacion true/false
-		Assert.assertTrue("TEST REGISTRAR FORMULARIO NO HA PASADO: SE ESPERABA 406 - Not Acceptable", respuestaCliente.getCodigoEstado()==406);
+		//El TEST es OK, si trae cod.estado correspondiente a la prueba 
+		Assert.assertTrue("TEST PRUEBA POST NO HA PASADO: SE ESPERABA 201 - Created", respuestaCliente.getCodigoEstado()==201);
 	}
 	
 
 	@Ignore ("descomentar para ignorar")	
 	@Test
-	public void borrarFormulario_DELETE() throws Exception {
+	public void prueba_DELETE() throws Exception {
 		 	
 		System.out.println(NEW_LINE+"TEST ---> BORRAR FORMULARIO DELETE....");
 		
-		//Datos de prueba: parametros
-		String perito = "00032"; 
-		String tramitacion =  "2021009999901";	
-		String tipoFormulario = "DT11";   
+		  
 		//url peticion
-		String urlPeticion = URL_PETICION + "borrarFormulario/"+perito+ "/"+tramitacion +"/"+tipoFormulario;	
+		String urlPeticion = URL_PETICION;	
 					
 		//CALL WS
 		clienteHttp = new ClienteHttp4513();
 		//Objeto de negocio respuesta cliente 
 		RespuestaClienteHttp respuestaCliente = clienteHttp.realizarPeticion_DELETE(urlPeticion);
 	
-		//El TEST es OK, si trae cod.estado correspodiente a la prueba y  recibe XML con confirmacion true/false
-		Assert.assertTrue("TEST BORRAR FORMULARIO NO HA PASADO: SE ESPERABA 400 BAD REQUEST", 
-						(respuestaCliente.getCodigoEstado()==400)
-						&& respuestaCliente.getResultado().contains("<confirmacion>") );
+		//El TEST es OK, si trae cod.estado correspodiente a la prueba 
+		Assert.assertTrue("TEST BORRAR NO HA PASADO: SE ESPERABA 404 NO CONTENT", respuestaCliente.getCodigoEstado()==404);
 	}
 
 
 	@Ignore ("descomentar para ignorar")	 
 	@Test
-	public void modificarFormulario_PUT() throws Exception {
+	public void prueba_modificar_PUT_XML() throws Exception {
 		
-		System.out.println(NEW_LINE+"TEST ---> MODIFICAR FORMULARIO PUT....");
+		System.out.println(NEW_LINE+"TEST ---> MODIFICAR  PUT....");
 		 
-		String urlPeticion = URL_PETICION + "modificarFormulario/"; 	 
+		String urlPeticion = URL_PETICION; 	 
 		
 		//Datos XML a enviar, obtenidos de file
 		String nombreArchivoXML = "datos.xml";
@@ -213,8 +144,8 @@ public class Test_ClienteHttp4513 {
 		//Objeto respuesta de negocio
 		RespuestaClienteHttp respuestaCliente  = clienteHttp.realizarPeticion_PUT(urlPeticion, datosXML);
 			
-		//El TEST es OK, si trae cod.estado correspondiente a la prueba y  recibe XML con confirmacion true/false
-		Assert.assertTrue("TEST MODIFICAR FORMULARIO NO HA PASADO: SE ESPERABA 406 - Not Acceptable", respuestaCliente.getCodigoEstado()==406);
+		//El TEST es OK, si trae cod.estado correspondiente a la prueba
+		Assert.assertTrue("TEST MODIFICAR  NO HA PASADO: SE ESPERABA 200- OK", respuestaCliente.getCodigoEstado()==200);
 	}
 	
 	
