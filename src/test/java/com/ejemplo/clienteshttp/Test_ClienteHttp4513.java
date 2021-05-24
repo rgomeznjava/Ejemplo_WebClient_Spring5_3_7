@@ -46,7 +46,7 @@ public class Test_ClienteHttp4513 {
 		PASSWORD = "XXXXXX";
 		
 		URL_PETICION = "https://dummy.restapiexample.com/api/v1/employees";
-		URL_PETICION = "https://www.google.es";
+		//URL_PETICION = "https://www.google.es";
 
 		
 	}	
