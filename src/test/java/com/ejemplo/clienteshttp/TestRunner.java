@@ -20,7 +20,7 @@ public class TestRunner {
 	    Result result;
 	    
 	    //Lanzar Test Junit (add clases)
-	    result = JUnitCore.runClasses(com.ejemplo.clienteshttp.Test_ClienteHttp4513.class);
+	    result = JUnitCore.runClasses(com.ejemplo.clienteshttp.Test_ClienteWebClient.class);
 	  	
 	    //Imprimir resultados
 	    StringBuilder sb = new StringBuilder("");
