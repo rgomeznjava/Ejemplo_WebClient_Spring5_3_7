@@ -1,3 +1,42 @@
 
-LIBRERIAS:
+LIBRERIAS DESCARGADAS POR MAVEN:
+
+/Users/R2D2/.m2/repository/io/zipkin/brave/brave/5.13.3/brave-5.13.3.jar
+/Users/R2D2/.m2/repository/io/zipkin/brave/brave-instrumentation-http/5.13.3/brave-instrumentation-http-5.13.3.jar
+/Users/R2D2/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar
+/Users/R2D2/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+/Users/R2D2/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar
+/Users/R2D2/.m2/repository/org/apache/logging/log4j/log4j-api/2.7/log4j-api-2.7.jar
+/Users/R2D2/.m2/repository/org/apache/logging/log4j/log4j-core/2.7/log4j-core-2.7.jar
+/Users/R2D2/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.7/log4j-slf4j-impl-2.7.jar
+/Users/R2D2/.m2/repository/io/netty/netty-buffer/4.1.63.Final/netty-buffer-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-codec/4.1.63.Final/netty-codec-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-codec-dns/4.1.63.Final/netty-codec-dns-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-codec-http2/4.1.63.Final/netty-codec-http2-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-codec-http/4.1.63.Final/netty-codec-http-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-codec-socks/4.1.63.Final/netty-codec-socks-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-common/4.1.63.Final/netty-common-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-handler/4.1.63.Final/netty-handler-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-handler-proxy/4.1.63.Final/netty-handler-proxy-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-resolver/4.1.63.Final/netty-resolver-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-resolver-dns/4.1.63.Final/netty-resolver-dns-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.63.Final/netty-resolver-dns-native-macos-4.1.63.Final-osx-x86_64.jar
+/Users/R2D2/.m2/repository/io/netty/netty-transport/4.1.63.Final/netty-transport-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/io/netty/netty-transport-native-epoll/4.1.63.Final/netty-transport-native-epoll-4.1.63.Final-linux-x86_64.jar
+/Users/R2D2/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.63.Final/netty-transport-native-unix-common-4.1.63.Final.jar
+/Users/R2D2/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar
+/Users/R2D2/.m2/repository/io/projectreactor/reactor-core/3.4.6/reactor-core-3.4.6.jar
+/Users/R2D2/.m2/repository/io/projectreactor/netty/reactor-netty/1.0.7/reactor-netty-1.0.7.jar
+/Users/R2D2/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.0.7/reactor-netty-core-1.0.7.jar
+/Users/R2D2/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.0.7/reactor-netty-http-1.0.7.jar
+/Users/R2D2/.m2/repository/io/projectreactor/netty/reactor-netty-http-brave/1.0.7/reactor-netty-http-brave-1.0.7.jar
+/Users/R2D2/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar
+/Users/R2D2/.m2/repository/org/springframework/spring-beans/5.3.7/spring-beans-5.3.7.jar
+/Users/R2D2/.m2/repository/org/springframework/spring-core/5.3.7/spring-core-5.3.7.jar
+/Users/R2D2/.m2/repository/org/springframework/spring-jcl/5.3.7/spring-jcl-5.3.7.jar
+/Users/R2D2/.m2/repository/org/springframework/spring-web/5.3.7/spring-web-5.3.7.jar
+/Users/R2D2/.m2/repository/org/springframework/spring-webflux/5.3.7/spring-webflux-5.3.7.jar
+/Users/R2D2/.m2/repository/io/zipkin/zipkin2/zipkin/2.23.2/zipkin-2.23.2.jar
+/Users/R2D2/.m2/repository/io/zipkin/reporter2/zipkin-reporter/2.16.3/zipkin-reporter-2.16.3.jar
+/Users/R2D2/.m2/repository/io/zipkin/reporter2/zipkin-reporter-brave/2.16.3/zipkin-reporter-brave-2.16.3.jar
 
