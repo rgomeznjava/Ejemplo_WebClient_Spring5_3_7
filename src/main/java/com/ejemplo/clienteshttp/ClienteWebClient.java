@@ -11,9 +11,9 @@ import org.springframework.web.reactive.function.client.WebClient;
 /**
  * 	CLIENTE HTTP CLIENT EJEMPLO CRUD
  * 
- * 	- IMPLEMENTA HTTPCLIENT 4.5.13
+ * 	- IMPLEMENTADO CON WebClient de SpringFlux
  * 
- * @author RGN 
+ * @author Raul Gomez Nieto
  *
  */
 public class ClienteWebClient {
